@@ -1,0 +1,132 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Feliz Natal</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            background: linear-gradient(135deg, #0f4c75, #1b6ca8);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Georgia', serif;
+            overflow: hidden;
+            color: white;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.12);
+            border-radius: 20px;
+            padding: 40px;
+            text-align: center;
+            width: 90%;
+            max-width: 520px;
+            box-shadow: 0 0 30px rgba(0,0,0,0.4);
+            animation: fadeIn 3s ease;
+            z-index: 2;
+        }
+
+        h1 {
+            font-size: 2.4em;
+            margin-bottom: 10px;
+            animation: glow 2s infinite alternate;
+        }
+
+        p {
+            font-size: 1.15em;
+            line-height: 1.6;
+            margin-top: 20px;
+        }
+
+        .assinatura {
+            margin-top: 30px;
+            font-style: italic;
+            font-size: 1.05em;
+        }
+
+        /* Animações */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: scale(0.9);
+            }
+
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        @keyframes glow {
+            from {
+                text-shadow: 0 0 5px #fff;
+            }
+
+            to {
+                text-shadow: 0 0 15px #ffd700;
+            }
+        }
+
+        /* Bolas de Natal */
+        .ornament {
+            position: absolute;
+            top: -50px;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            animation: fall linear infinite;
+            opacity: 0.9;
+        }
+
+        @keyframes fall {
+            to {
+                transform: translateY(110vh);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card">
+        <h1>🎄 Feliz Natal 🎄</h1>
+        <p>
+            Que o espírito do Natal traga paz, saúde e esperança.<br>
+            Que não faltem bons momentos, união e alegria.<br><br>
+            Desejamos a você e sua família um Natal iluminado<br>
+            e um Ano Novo repleto de realizações.
+        </p>
+        <div class="assinatura">
+            Com carinho,<br>
+            Eduardo e Ana
+        </div>
+    </div>
+
+    <script>
+    const colors = ["#d62828", "#fcbf49", "#eae2b7", "#4cc9f0", "#9b5de5"];
+
+    for (let i = 0; i < 30; i++) {
+        const ornament = document.createElement("div");
+        ornament.className = "ornament";
+        ornament.style.left = Math.random() * 100 + "vw";
+        ornament.style.animationDuration = (Math.random() * 4 + 6) + "s";
+        ornament.style.width = ornament.style.height = (Math.random() * 12 + 12) + "px";
+        ornament.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+        document.body.appendChild(ornament);
+    }
+    </script>
+
+</body>
+</html>
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+
+</body>
+</html>
